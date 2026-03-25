@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create PO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container mt-5">
+
+    <div class="card">
+        <h2>📝 Create Purchase Order</h2>
+
+        <div class="mb-3">
+            <label>Reference No</label>
+            <input type="text" id="ref" class="form-control" placeholder="Enter PO reference">
+        </div>
+
+        <div class="mb-3">
+            <label>Vendor</label>
+            <select id="vendor" class="form-control"></select>
+        </div>
+
+        <h5 class="mt-4">Products</h5>
+
+        <table class="table table-bordered mt-2">
+            <thead class="table-light">
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+        </table>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-secondary" onclick="addRow()">+ Add Product</button>
+            <h5>Total: ₹<span id="total">0</span></h5>
+        </div>
+
+        <button class="btn btn-success mt-3 w-100" onclick="submitPO()">Submit Purchase Order</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
